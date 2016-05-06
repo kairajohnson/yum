@@ -17,8 +17,8 @@ var smokeys = new RestaurantModel({name: "Smokeys", "address": {"street": "4714 
 
 var selam = new RestaurantModel({name: "Selam", "address": {"street": "1524 U St NW, Washington, DC ", "zipcode": 20009}, yelp_url:"http://www.yelp.com/biz/selam-restaurant-washington" })
 
-var item1 = new ItemModel({title: "Fried Chicken and Potato Wedges with Mumbo Sauce, Steak and Cheese, Steak and Eggs, Chicken and Waffles, Fried Fish"})
-var item2 = new ItemModel({title: "Lamb Tibbs", "Tsebhi Dorho", "Shiro", "Hamli Tibbs"})
+var item1 = new ItemModel({title: "Fried Chicken and Potato Wedges with Mumbo Sauce, Steak and Cheese, Steak and Eggs, Chicken and Waffles, Fried Fish"});
+var item2 = new ItemModel({title: "Lamb Tibbs, Tsebhi Dorho, Shiro, Hamli Tibbs"});
 
 var restaurants = [smokeys, selam]
 var items = [item1, item2]
