@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect = ('mongodb://localhost/restaurants');
+mongoose.connect('mongodb://localhost/restaurant_db');
 
 var db = mongoose.connection;
 
@@ -11,10 +11,10 @@ db.once('open', function(){
   console.log("database has been connected!")
 });
 
-process.exit();
+
 
 var Schema = mongoose.Schema,
-ObjectId = Schema.ObjectId
+  ObjectId = Schema.ObjectId
 
 var RestaurantSchema = new Schema({
   name: String,
@@ -23,16 +23,15 @@ var RestaurantSchema = new Schema({
       zipcode: Number
     },
   yelp_url: String,
-  items:[ItemSchema]
+
 });
 
 var ItemSchema = new Schema({
-  title: String
+  title:      String
 });
 
-var RestaurantModel = mongoose.model("Restaurant", RestaurantSchema)
-
-var ItemModel = mongoose.model("Item", ItemSchema)
+var RestaurantModel = mongoose.model("Restaurant", RestaurantSchema);
+var ItemModel       = mongoose.model("Item", ItemSchema);
 
 module.exports={
   RestaurantModel: RestaurantModel,
